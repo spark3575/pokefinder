@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  pokefinderVC.swift
 //  pokefinder
 //
 //  Created by Shin Park on 3/26/17.
@@ -8,11 +8,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class pokefinderVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
     }
 
     override func didReceiveMemoryWarning() {
