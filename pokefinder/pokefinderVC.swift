@@ -17,7 +17,7 @@ class pokefinderVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelega
     let locationManager = CLLocationManager()
     var mapHasCenteredOnce = false
     var geoFire: GeoFire!
-    var geoFireRef: FIRDatabaseReference!
+    var geoFireRef: DatabaseReference!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +25,7 @@ class pokefinderVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelega
         mapView.delegate = self
         mapView.userTrackingMode = MKUserTrackingMode.follow
         
-        geoFireRef = FIRDatabase.database().reference()
+        geoFireRef = Database.database().reference()
         geoFire = GeoFire(firebaseRef: geoFireRef)
         
     }
@@ -150,7 +150,7 @@ class pokefinderVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelega
         
     }
 
-    @IBAction func spotRandomPokemon(_ sender: Any) {
+    @IBAction func pokeBallPressed(_ sender: UIButton) {
         
         let loc = CLLocation(latitude: mapView.centerCoordinate.latitude, longitude: mapView.centerCoordinate.longitude)
         
